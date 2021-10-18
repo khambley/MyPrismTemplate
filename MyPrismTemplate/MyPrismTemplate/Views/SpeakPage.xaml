@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="http://prismlibrary.com"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="MyPrismTemplate.Views.SpeakPage">
+             x:Class="MyPrismTemplate.Views.SpeakPage"
+             Title="{Binding Title}">
     <StackLayout VerticalOptions="CenterAndExpand">
         <Entry Text="{Binding TextToSay}" />
         <Button Text="Speak" Command="{Binding SpeakCommand}"/>
