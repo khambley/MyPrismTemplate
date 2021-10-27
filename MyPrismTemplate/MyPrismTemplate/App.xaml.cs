@@ -29,6 +29,8 @@ namespace MyPrismTemplate
 			containerRegistry.RegisterForNavigation<NavigationPage>();
 			containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
 			containerRegistry.RegisterForNavigation<SpeakPage, SpeakPageViewModel>();
+			containerRegistry.RegisterForNavigation<GridDemoPage, GridDemoPageViewModel>();
+			containerRegistry.RegisterForNavigation<WebViewDemoPage, WebViewDemoPageViewModel>();
 		}
 	}
 }

@@ -2,11 +2,75 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyPrismTemplate.Views.MainPage"
-             Title="{Binding Title}">
+             Title="{Binding Title}"
+             Padding="5,5,0,0">
 
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="Welcome to Xamarin Forms and Prism!" />
-        <Button Text="Navigate to speak page" Command="{Binding NavigateToSpeakPageCommand}" />
+    <StackLayout
+        Padding="5"
+        Margin="20,35,20,25"
+        Spacing="20"
+        HorizontalOptions="CenterAndExpand"
+        VerticalOptions="StartAndExpand">
+
+        <Label
+            HorizontalTextAlignment="Center"
+            FontSize="Title"
+            Text="Welcome to Xamarin Forms and Prism!" />
+        <Label
+            HorizontalTextAlignment="Center"
+            FontSize="Medium"
+            Text="This is my Xamarin Forms &quot;Playground&quot; where I experiment with all things Xamarin!" />
+
+        <StackLayout
+        Padding="5"
+        Spacing="10"
+        HorizontalOptions="CenterAndExpand"
+        VerticalOptions="StartAndExpand">
+
+            <Button
+                Padding="40,10"
+                HorizontalOptions="FillAndExpand"
+                TextColor="White"
+                FontSize="Large"
+                FontAttributes="Bold"
+                BackgroundColor="DodgerBlue"
+                Text="Go to Speak Page"
+                Command="{Binding NavigateToSpeakPageCommand}" />
+
+            <Button
+                Padding="40,10"
+                HorizontalOptions="FillAndExpand"
+                TextColor="White"
+                FontSize="Large"
+                FontAttributes="Bold"
+                BackgroundColor="Red"
+                Text="Go to Grid Page"
+                Command="{Binding NavigateToGridDemoPageCommand}" />
+
+            <Button
+                Padding="40,10"
+                HorizontalOptions="FillAndExpand"
+                TextColor="White"
+                FontSize="Large"
+                FontAttributes="Bold"
+                BackgroundColor="Orange"
+                Text="Go to WebView Page"
+                Command="{Binding NavigateToWebViewDemoPageCommand}" />
+
+        </StackLayout>
+        
+        <StackLayout
+            Margin="0,0,0,0"
+            VerticalOptions="EndAndExpand">
+
+            <Label
+                HorizontalOptions="Center"
+                Text="by Katherine Hambley" />
+            <Label
+                HorizontalOptions="Center"
+                Text="{Binding LastUpdated}" />
+        </StackLayout>
+
     </StackLayout>
-
+    
 </ContentPage>

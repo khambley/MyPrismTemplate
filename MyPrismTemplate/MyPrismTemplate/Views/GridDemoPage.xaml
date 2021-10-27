@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="MyPrismTemplate.Views.GridDemoPage"
+             Title="{Binding Title}">
+    <StackLayout Margin="0,10,0,10">
+        <Label
+            HorizontalTextAlignment="Center"
+            FontSize="Large"
+            Text="Grid Demo #1" />
+        <!--A Grid with 2 rows and 2 columns-->
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+
+         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Label
+            BackgroundColor="LightSkyBlue"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+            Text="Column 0, Row 0"
+            WidthRequest="200" />
+
+        <Label
+            Grid.Column="1"
+            BackgroundColor="LightCoral"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+            Text="Column 1, Row 0" />
+
+        <Label
+            Grid.Row="1"
+            BackgroundColor="LightGreen"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+            Text="Column 0, Row 1" />
+        <Label
+            Grid.Column="1"
+            Grid.Row="1"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+            BackgroundColor="LightGoldenrodYellow"
+            Text="Column 1, Row 1" />
+    </Grid>
+        <!--A Grid with 3 rows and 1 column in first row, and 2 columns next rows-->
+        <Grid Margin="10,20,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="20" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Label
+                Text="Name:"
+                WidthRequest="200" />
+            
+            
+        </Grid>
+    </StackLayout>
+    
+</ContentPage>
